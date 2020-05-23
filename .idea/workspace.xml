@@ -22,9 +22,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45444bce-53ef-4493-823d-ce23772faceb" name="Default Changelist" comment="A screen appears! &#10;Tried  experimenting with colours.">
-      <change beforePath="$PROJECT_DIR$/src/screen/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/screen/mod.rs" afterDir="false" />
-    </list>
+    <list default="true" id="45444bce-53ef-4493-823d-ce23772faceb" name="Default Changelist" comment="A screen appears! &#10;Tried  experimenting with colours." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -186,30 +184,34 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="262" y="280" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1589013631011" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1589642303138">
+    <state width="1874" height="274" key="GridCell.Tab.0.bottom" timestamp="1590223320859">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1589642303138" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1589642303137">
+    <state width="1874" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1590223320859" />
+    <state width="1874" height="274" key="GridCell.Tab.0.center" timestamp="1590223320858">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1589642303137" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1589642303137">
+    <state width="1874" height="274" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1590223320858" />
+    <state width="1874" height="274" key="GridCell.Tab.0.left" timestamp="1590223320858">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1589642303137" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1589642303137">
+    <state width="1874" height="274" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1590223320858" />
+    <state width="1874" height="274" key="GridCell.Tab.0.right" timestamp="1590223320859">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1589642303137" />
+    <state width="1874" height="274" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1590223320859" />
     <state x="457" y="155" key="SettingsEditor" timestamp="1590223023625">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1590223023625" />
-    <state x="620" y="238" width="672" height="677" key="run.anything.popup" timestamp="1589011545284">
+    <state x="754" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590223382394">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="620" y="238" width="672" height="677" key="run.anything.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1589011545284" />
+    <state x="754" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1044@0.0.1920.1044" timestamp="1590223382394" />
+    <state x="620" y="238" width="672" height="677" key="run.anything.popup" timestamp="1590223308115">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="620" y="238" width="672" height="677" key="run.anything.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1590223308115" />
     <state x="756" y="403" key="scopes" timestamp="1589012714177">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
