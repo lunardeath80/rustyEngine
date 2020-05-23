@@ -11,6 +11,8 @@ struct Pixel {
     colour: String
 }
 
+pub const BASE_PIXEL_CHAR: char =  '\u{2588}';
+
 pub const colour_Red: &str = "\u{001b}[31m";
 pub const colour_Blue: &str = "\u{001b}[34m";
 pub const colour_Green: &str = "\u{001b}[32m";
@@ -28,10 +30,16 @@ impl Pixel {
     }
 }
 
+fn new_pixel(colour: &str) -> Pixel {
+    Pixel {
+        px: BASE_PIXEL_CHAR,
+        colour: String::from(colour)
+    }
+}
 pub fn new(width:usize, height: usize)  -> Screen {
-    let px = Pixel {
-        px: '\u{2580}',
-        colour: String::from(colour_Blue)
+    let px = Pixel{
+        px: BASE_PIXEL_CHAR,
+        colour: String::from(colour_White)
     };
 
     let pixels = vec![px;width*height];
@@ -60,10 +68,14 @@ impl Screen {
         }
         buffer.push_str(&"#".repeat(self.scale * self.width + 2));
         buffer.push_str("\n");
+        buffer.push_str("\u{001b}[34A");
 
         print!("{}",buffer)
     }
 
+    pub fn set_pixel(&mut self, position: usize, colour: &str) {
+        self.pixels[position] =new_pixel(colour);
+    }
 
 }
 
