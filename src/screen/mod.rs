@@ -1,3 +1,5 @@
+use rustyMath::Vector::Vec2;
+
 pub struct Screen {
     pixels: Vec<Pixel>,
     scale: usize,
@@ -56,6 +58,7 @@ impl Screen {
     pub fn draw(&self) {
         let mut buffer = String::from("");
 
+        buffer.push_str("\u{001b}[34A");
         buffer.push_str(&"#".repeat(self.scale * self.width + 2));
         buffer.push_str("\n");
 
@@ -68,14 +71,16 @@ impl Screen {
         }
         buffer.push_str(&"#".repeat(self.scale * self.width + 2));
         buffer.push_str("\n");
-        buffer.push_str("\u{001b}[34A");
 
         print!("{}",buffer)
     }
 
     pub fn set_pixel(&mut self, position: usize, colour: &str) {
-        self.pixels[position] =new_pixel(colour);
+        self.pixels[position] = new_pixel(colour);
     }
 
+    pub fn flatten (&self, vec_pos: Vec2) -> usize {
+        (vec_pos.x as usize)+self.width* usize::from(vec_pos.y as usize)
+    }
 }
 

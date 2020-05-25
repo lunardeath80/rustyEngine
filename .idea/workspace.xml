@@ -22,10 +22,10 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45444bce-53ef-4493-823d-ce23772faceb" name="Default Changelist" comment="A screen appears! &#10;Tried  experimenting with colours.">
-      <change afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+    <list default="true" id="45444bce-53ef-4493-823d-ce23772faceb" name="Default Changelist" comment="Tested pixel moving across screen.&#10;It works!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screen/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/screen/mod.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +52,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Graphics/RustyEngine/src/render/mod.rs" />
@@ -170,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590223401623</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Tested pixel moving across screen.&#10;It works!">
+      <created>1590227274137</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590227274137</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -197,9 +205,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="A screen appears! &#10;Tried  experimenting with colours." />
-    <option name="LAST_COMMIT_MESSAGE" value="A screen appears! &#10;Tried  experimenting with colours." />
+    <MESSAGE value="Tested pixel moving across screen.&#10;It works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tested pixel moving across screen.&#10;It works!" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1038" y="164" key="#Plugins" timestamp="1590311539292">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="1038" y="164" key="#Plugins/0.0.1920.1044@0.0.1920.1044" timestamp="1590311539292" />
     <state x="555" y="69" key="CommitChangelistDialog2" timestamp="1589015011804">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -208,26 +221,26 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="262" y="280" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1589013631011" />
-    <state width="1874" height="489" key="GridCell.Tab.0.bottom" timestamp="1590227057431">
+    <state width="1874" height="489" key="GridCell.Tab.0.bottom" timestamp="1590227337431">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1590227057431" />
-    <state width="1874" height="489" key="GridCell.Tab.0.center" timestamp="1590227057430">
+    <state width="1874" height="489" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1590227337431" />
+    <state width="1874" height="489" key="GridCell.Tab.0.center" timestamp="1590227337430">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1590227057430" />
-    <state width="1874" height="489" key="GridCell.Tab.0.left" timestamp="1590227057429">
+    <state width="1874" height="489" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1590227337430" />
+    <state width="1874" height="489" key="GridCell.Tab.0.left" timestamp="1590227337430">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1590227057429" />
-    <state width="1874" height="489" key="GridCell.Tab.0.right" timestamp="1590227057430">
+    <state width="1874" height="489" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1590227337430" />
+    <state width="1874" height="489" key="GridCell.Tab.0.right" timestamp="1590227337431">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1590227057430" />
-    <state x="457" y="155" key="SettingsEditor" timestamp="1590223942318">
+    <state width="1874" height="489" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1590227337431" />
+    <state x="457" y="155" key="SettingsEditor" timestamp="1590396252480">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="457" y="155" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1590223942318" />
+    <state x="457" y="155" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1590396252480" />
     <state x="747" y="191" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590226918011">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>

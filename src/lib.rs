@@ -1,4 +1,3 @@
-extern crate rustyMath;
 pub mod screen;
 
 
