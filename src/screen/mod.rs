@@ -58,7 +58,7 @@ impl Screen {
     pub fn draw(&self) {
         let mut buffer = String::from("");
 
-        buffer.push_str("\u{001b}[34A");
+        buffer.push_str("\u{001b}[50A");
         buffer.push_str(&"#".repeat(self.scale * self.width + 2));
         buffer.push_str("\n");
 
@@ -82,5 +82,20 @@ impl Screen {
     pub fn flatten (&self, vec_pos: Vec2) -> usize {
         (vec_pos.x as usize)+self.width* usize::from(vec_pos.y as usize)
     }
+
+    pub fn blit_line(&mut self, start: Vec2, end: Vec2)  {
+
+        let dir = (end.grid()-start.grid()).normalise();
+        let mut cur = start.grid();
+
+        while cur.grid() != end {
+            self.set_pixel(self.flatten(cur.grid()), colour_Green);
+            cur = (dir + cur);
+        }
+    }
 }
 
+pub trait Blit {
+    fn blit(&self, Window:&mut Screen);
+
+}

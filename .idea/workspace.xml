@@ -16,15 +16,20 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="CargoProjects">
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45444bce-53ef-4493-823d-ce23772faceb" name="Default Changelist" comment="Tested pixel moving across screen.&#10;It works!">
+    <list default="true" id="45444bce-53ef-4493-823d-ce23772faceb" name="Default Changelist" comment="Added functionality to draw lines.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screen/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/screen/mod.rs" afterDir="false" />
     </list>
@@ -178,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590227274137</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added functionality to draw lines.">
+      <created>1590399483811</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590399483811</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -196,7 +208,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -206,7 +230,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="A screen appears! &#10;Tried  experimenting with colours." />
     <MESSAGE value="Tested pixel moving across screen.&#10;It works!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tested pixel moving across screen.&#10;It works!" />
+    <MESSAGE value="Added functionality to draw lines." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to draw lines." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1038" y="164" key="#Plugins" timestamp="1590311539292">
@@ -217,10 +242,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="555" y="69" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1589015011804" />
-    <state x="262" y="280" key="FileChooserDialogImpl" timestamp="1589013631011">
+    <state x="262" y="280" width="432" height="487" key="FileChooserDialogImpl" timestamp="1590665257969">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="262" y="280" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1589013631011" />
+    <state x="262" y="280" width="432" height="487" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1590665257969" />
     <state width="1874" height="489" key="GridCell.Tab.0.bottom" timestamp="1590227337431">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -241,6 +266,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1590396252480" />
+    <state x="556" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590399491381">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="556" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1590399491381" />
     <state x="747" y="191" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590226918011">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>

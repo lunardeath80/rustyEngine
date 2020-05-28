@@ -3,17 +3,23 @@ use std::time::Duration;
 
 mod screen;
 mod anim;
+mod polygon;
 
 use rustyMath::Vector::{*};
+use crate::polygon::Polygon;
+use crate::screen::Blit;
 
 fn main() {
 
-    let mut Window = screen::new(64,32);
+    let mut window = screen::new(256,48);
     print!("\u{001b}[1J");
     print!("\u{001b}[H");
-    let start = Vec2::new(0.0, 0.0);
-    let end = Vec2::new(16.0, 16.0);
 
-    anim::draw_line(&mut Window, start,end);
+    let a = Vec2::new(0.0, 5.0);
+    let b = Vec2::new(5.0,0.0);
 
+    let line = polygon::line(a,b);
+
+    line.blit(&mut window);
+    window.draw();
 }
