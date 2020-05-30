@@ -93,8 +93,19 @@ impl Screen {
             cur = (dir + cur);
         }
     }
+
+    pub fn clear (&mut self) {
+
+        for i in 0..self.width*self.height {
+            self.set_pixel(i, colour_White);
+        }
+        //let px: Vec<usize> = (0..self.width*self.height).collect();
+        //px.iter().map(|x| self.set_pixel(*x, colour_Red));
+    }
 }
 
+
+//Trait that handles rendering of types
 pub trait Blit {
     fn blit(&self, Window:&mut Screen);
 

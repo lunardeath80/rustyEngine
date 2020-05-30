@@ -28,9 +28,10 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45444bce-53ef-4493-823d-ce23772faceb" name="Default Changelist" comment="Added functionality to draw lines.">
+    <list default="true" id="45444bce-53ef-4493-823d-ce23772faceb" name="Default Changelist" comment="Added polygon struct&#10;Added Blit trait to handle blitting of polygons.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/polygon/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/polygon/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screen/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/screen/mod.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Graphics/RustyEngine/src/render/mod.rs" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -190,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590399483811</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added polygon struct&#10;Added Blit trait to handle blitting of polygons.">
+      <created>1590670202990</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590670202990</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -231,13 +239,18 @@
     <MESSAGE value="A screen appears! &#10;Tried  experimenting with colours." />
     <MESSAGE value="Tested pixel moving across screen.&#10;It works!" />
     <MESSAGE value="Added functionality to draw lines." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to draw lines." />
+    <MESSAGE value="Added polygon struct&#10;Added Blit trait to handle blitting of polygons." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added polygon struct&#10;Added Blit trait to handle blitting of polygons." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1038" y="164" key="#Plugins" timestamp="1590311539292">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="1038" y="164" key="#Plugins/0.0.1920.1044@0.0.1920.1044" timestamp="1590311539292" />
+    <state x="769" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1590834293072">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="769" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1044@0.0.1920.1044" timestamp="1590834293072" />
     <state x="555" y="69" key="CommitChangelistDialog2" timestamp="1589015011804">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -246,30 +259,30 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="262" y="280" width="432" height="487" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1590665257969" />
-    <state width="1874" height="489" key="GridCell.Tab.0.bottom" timestamp="1590227337431">
+    <state width="1874" height="489" key="GridCell.Tab.0.bottom" timestamp="1590833010531">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1590227337431" />
-    <state width="1874" height="489" key="GridCell.Tab.0.center" timestamp="1590227337430">
+    <state width="1874" height="489" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1590833010531" />
+    <state width="1874" height="489" key="GridCell.Tab.0.center" timestamp="1590833010531">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1590227337430" />
-    <state width="1874" height="489" key="GridCell.Tab.0.left" timestamp="1590227337430">
+    <state width="1874" height="489" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1590833010531" />
+    <state width="1874" height="489" key="GridCell.Tab.0.left" timestamp="1590833010531">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1590227337430" />
-    <state width="1874" height="489" key="GridCell.Tab.0.right" timestamp="1590227337431">
+    <state width="1874" height="489" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1590833010531" />
+    <state width="1874" height="489" key="GridCell.Tab.0.right" timestamp="1590833010531">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1590227337431" />
-    <state x="457" y="155" key="SettingsEditor" timestamp="1590396252480">
+    <state width="1874" height="489" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1590833010531" />
+    <state x="457" y="155" key="SettingsEditor" timestamp="1590828363333">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="457" y="155" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1590396252480" />
-    <state x="556" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590399491381">
+    <state x="457" y="155" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1590828363333" />
+    <state x="556" y="256" key="Vcs.Push.Dialog.v2" timestamp="1590670211584">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="556" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1590399491381" />
+    <state x="556" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1590670211584" />
     <state x="747" y="191" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590226918011">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -278,10 +291,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="754" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1044@0.0.1920.1044" timestamp="1590223382394" />
-    <state x="620" y="238" width="672" height="677" key="run.anything.popup" timestamp="1590224294684">
+    <state x="620" y="238" width="672" height="677" key="run.anything.popup" timestamp="1590833566538">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="620" y="238" width="672" height="677" key="run.anything.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1590224294684" />
+    <state x="620" y="238" width="672" height="677" key="run.anything.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1590833566538" />
     <state x="756" y="403" key="scopes" timestamp="1589012714177">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
