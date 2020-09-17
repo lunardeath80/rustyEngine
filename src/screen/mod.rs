@@ -5,6 +5,8 @@ pub struct Screen {
     ratio: usize,
     width: usize,
     height: usize,
+
+    enable_border: bool,
 }
 #[derive(Clone)]
 
@@ -51,6 +53,7 @@ pub fn new(width: usize, height: usize, ratio: usize) -> Screen {
         ratio,
         width,
         height,
+        enable_border: true,
     };
 
     screen.clear();
@@ -63,20 +66,39 @@ impl Screen {
         let mut buffer = String::from("");
 
         buffer.push_str("\u{001b}[2J");
-        buffer.push_str(&"#".repeat(self.ratio * self.width + 2));
-        buffer.push_str("\n");
+
+        if self.enable_border {
+            buffer.push_str(&"#".repeat(self.ratio * self.width + 2));
+            buffer.push_str("\n");
+        }
 
         for j in 0..self.height {
-            buffer.push_str("#");
+            if self.enable_border {
+                buffer.push_str("#");
+            }
             for i in 0..self.width {
                 buffer.push_str(&self.pixels[i + self.width * j].unwrap().repeat(self.ratio));
             }
-            buffer.push_str("\u{001b}[;;m#\n");
+
+            if self.enable_border {
+                buffer.push_str("\u{001b}[;;m#");
+            }
+
+            buffer.push_str("\n");
         }
-        buffer.push_str(&"#".repeat(self.ratio * self.width + 2));
-        buffer.push_str("\n");
+
+        if self.enable_border {
+            buffer.push_str(&"#".repeat(self.ratio * self.width + 2));
+            buffer.push_str("\n");
+        }
 
         print!("{}", buffer)
+    }
+
+    pub fn toggle_border(mut self) -> Self {
+        self.enable_border = !self.enable_border;
+
+        return self;
     }
 
     pub fn set_pixel(&mut self, position: usize, colour: &str) {
@@ -101,8 +123,6 @@ impl Screen {
         for i in 0..self.width * self.height {
             self.set_pixel(i, COLOUR_WHITE);
         }
-        //let px: Vec<usize> = (0..self.width*self.height).collect();
-        //px.iter().map(|x| self.set_pixel(*x, colour_Red));
     }
 }
 
