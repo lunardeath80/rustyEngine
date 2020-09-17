@@ -2,7 +2,7 @@ use rustyMath::Vector::Vec2;
 
 pub struct Screen {
     pixels: Vec<Pixel>,
-    scale: usize,
+    ratio: usize,
     width: usize,
     height: usize,
 }
@@ -38,7 +38,7 @@ fn new_pixel(colour: &str) -> Pixel {
         colour: String::from(colour),
     }
 }
-pub fn new(width: usize, height: usize) -> Screen {
+pub fn new(width: usize, height: usize, ratio: usize) -> Screen {
     let px = Pixel {
         px: BASE_PIXEL_CHAR,
         colour: String::from(COLOUR_WHITE),
@@ -48,7 +48,7 @@ pub fn new(width: usize, height: usize) -> Screen {
 
     let mut screen = Screen {
         pixels,
-        scale: 1,
+        ratio,
         width,
         height,
     };
@@ -63,17 +63,17 @@ impl Screen {
         let mut buffer = String::from("");
 
         buffer.push_str("\u{001b}[2J");
-        buffer.push_str(&"#".repeat(self.scale * self.width + 2));
+        buffer.push_str(&"#".repeat(self.ratio * self.width + 2));
         buffer.push_str("\n");
 
         for j in 0..self.height {
             buffer.push_str("#");
             for i in 0..self.width {
-                buffer.push_str(&self.pixels[i + self.width * j].unwrap());
+                buffer.push_str(&self.pixels[i + self.width * j].unwrap().repeat(self.ratio));
             }
-            buffer.push_str("#\n");
+            buffer.push_str("\u{001b}[;;m#\n");
         }
-        buffer.push_str(&"#".repeat(self.scale * self.width + 2));
+        buffer.push_str(&"#".repeat(self.ratio * self.width + 2));
         buffer.push_str("\n");
 
         print!("{}", buffer)
