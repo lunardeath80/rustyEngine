@@ -15,12 +15,12 @@ struct Pixel {
 
 pub const BASE_PIXEL_CHAR: char = '\u{2588}';
 
-pub const colour_Red: &str = "\u{001b}[31m";
-pub const colour_Blue: &str = "\u{001b}[34m";
-pub const colour_Green: &str = "\u{001b}[32m";
-pub const colour_Yellow: &str = "\u{001b}[33m";
-pub const colour_Cyan: &str = "\u{001b}[36m";
-pub const colour_White: &str = "\u{001b}[37m";
+pub const COLOUR_RED: &str = "\u{001b}[31m";
+pub const COLOUR_BLUE: &str = "\u{001b}[34m";
+pub const COLOUR_GREEN: &str = "\u{001b}[32m";
+pub const COLOUR_YELLOW: &str = "\u{001b}[33m";
+pub const COLOUR_CYAN: &str = "\u{001b}[36m";
+pub const COLOUR_WHITE: &str = "\u{001b}[37m";
 
 impl Pixel {
     pub fn unwrap(&self) -> String {
@@ -41,23 +41,28 @@ fn new_pixel(colour: &str) -> Pixel {
 pub fn new(width: usize, height: usize) -> Screen {
     let px = Pixel {
         px: BASE_PIXEL_CHAR,
-        colour: String::from(colour_White),
+        colour: String::from(COLOUR_WHITE),
     };
 
     let pixels = vec![px; width * height];
-    Screen {
+
+    let mut screen = Screen {
         pixels,
         scale: 1,
         width,
         height,
-    }
+    };
+
+    screen.clear();
+
+    return screen;
 }
 
 impl Screen {
     pub fn draw(&self) {
         let mut buffer = String::from("");
 
-        buffer.push_str("\u{001b}[50A");
+        buffer.push_str("\u{001b}[2J");
         buffer.push_str(&"#".repeat(self.scale * self.width + 2));
         buffer.push_str("\n");
 
@@ -87,14 +92,14 @@ impl Screen {
         let mut cur = start.grid();
 
         while cur.grid() != end {
-            self.set_pixel(self.flatten(cur.grid()), colour_Green);
-            cur = (dir + cur);
+            self.set_pixel(self.flatten(cur.grid()), COLOUR_GREEN);
+            cur = dir + cur;
         }
     }
 
     pub fn clear(&mut self) {
         for i in 0..self.width * self.height {
-            self.set_pixel(i, colour_White);
+            self.set_pixel(i, COLOUR_WHITE);
         }
         //let px: Vec<usize> = (0..self.width*self.height).collect();
         //px.iter().map(|x| self.set_pixel(*x, colour_Red));
@@ -103,5 +108,5 @@ impl Screen {
 
 //Trait that handles rendering of types
 pub trait Blit {
-    fn blit(&self, Window: &mut Screen);
+    fn blit(&self, window: &mut Screen);
 }
